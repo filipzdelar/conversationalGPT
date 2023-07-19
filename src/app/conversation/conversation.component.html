@@ -1,8 +1,10 @@
-<div class="conversation">
+ <div class="conversation">
     <div *ngFor="let message of messages; let i = index" [ngClass]="{ 'message': true, 'bot-message': i % 2 !== 0, 'user-message': i % 2 === 0 }">{{ message }}</div>
-  </div>
+</div>
 
-  <div class="input-container">
-    <input type="text"  placeholder="Type your message">
-    <button (click)="addMessage()">Send</button>
-  </div>
+<form class="input-container" [formGroup]="checkoutForm" (ngSubmit)="addMessage()">
+
+  <input id="name" type="text" formControlName="name">
+  <button class="button" type="submit">Ask</button>
+
+</form>

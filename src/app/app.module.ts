@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExternalViewComponent } from './external-view/external-view.component';
 import { ConversationComponent } from './conversation/conversation.component';
+import { ConversationModule } from './conversation/conversation.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { ConversationComponent } from './conversation/conversation.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
